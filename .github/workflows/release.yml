@@ -43,7 +43,7 @@ jobs:
         uses: RubixDev/modrinth-upload@v1
         with:
           token: ${{ secrets.MODRINTH_TOKEN }}
-          file_path: *.mrpack
+          file_path: ramenlikkers-pack-${{ github.event.release.tag_name }}.mrpack
           name: Ramenlikkers Pack ${{ github.event.release.tag_name }}
           version: ${{ github.event.release.tag_name }}
           changelog: ${{ github.event.release.body }}
