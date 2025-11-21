@@ -21,10 +21,13 @@ jobs:
         run: |
           sed -i "s/^version = .*/version = \"${{ github.event.release.tag_name }}\"/" pack.toml
 
+      - name: Make build.sh executable
+        run: chmod +x utils/build.sh
+
       - name: Build using Packwiz
         run: |
           VERSION="${{ github.event.release.tag_name }}" \
-          PACK_NAME="my-modpack" \
+          PACK_NAME="ramenlikkers-pack" \
           ./utils/build.sh
 
       - name: Upload artifact to GitHub
