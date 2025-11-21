@@ -1,0 +1,13 @@
+name = "Ramenlikkers Pack"
+author = "Joris"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "52098a9e96dc1ff54cfa05ccbbc4dc90b1497b09f197cee09eb204ae7a3a5b82"
+
+[versions]
+fabric = "0.18.1"
+minecraft = "1.21.10"

@@ -1,0 +1,130 @@
+hash-format = "sha256"
+
+[[files]]
+file = "READNE.md"
+hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
+[[files]]
+file = "mods/armor-poser.pw.toml"
+hash = "d2416c9882caa02158d22a25ab42c95d096a1d00e796e34a46a0c4b6c5267c88"
+metafile = true
+
+[[files]]
+file = "mods/chat-heads.pw.toml"
+hash = "bc4668d6a3c606c1e1d95d3dc924d37edddc353b14f665d8d60c5638eadb8f64"
+metafile = true
+
+[[files]]
+file = "mods/chat-signing-hider.pw.toml"
+hash = "8cb0488195af61cf03d34b4e88ad0ef4baedfd093ae647e7a0704905d10ba37c"
+metafile = true
+
+[[files]]
+file = "mods/cicada.pw.toml"
+hash = "551d9247d8cbba099f84e416ac50fe322f82401eef6800d3bfa159be521acb9b"
+metafile = true
+
+[[files]]
+file = "mods/cloth-config.pw.toml"
+hash = "717d8ac591dba59be4767a179e1359747561e54ccfcac42161fd6bf54339a78b"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "cbda4f1881cfb9f054395a3db225df4202d1f2e7bd0ed27d803b837fcf728621"
+metafile = true
+
+[[files]]
+file = "mods/facebar.pw.toml"
+hash = "e411d3eaf156c09a380c3d99842201e412174fe2c5c2053b617067fb5e1c9263"
+metafile = true
+
+[[files]]
+file = "mods/libjf.pw.toml"
+hash = "8c75e0407d200803b12333bc2dc59f25b3e0060aa3f07ccfa59ebaa194acd560"
+metafile = true
+
+[[files]]
+file = "mods/lithium.pw.toml"
+hash = "84957275e9dc6f07f4244ce3303536e3d73b0e72eb1696ccd024168a52c29c98"
+metafile = true
+
+[[files]]
+file = "mods/malilib.pw.toml"
+hash = "df5ce30f6ac464f7b06400e03568d2b9087dd1849fd8c21a2381fe2f666338b6"
+metafile = true
+
+[[files]]
+file = "mods/minihud.pw.toml"
+hash = "2d373a1128cdb01a77053c64d5d6a64cf76c2d68da0529b2cc0f2dd6f8371767"
+metafile = true
+
+[[files]]
+file = "mods/modmenu.pw.toml"
+hash = "5dd45d5fd5e1ae2bd521b93a70b83c69b57ada18f424c6562d8c6ea9980cfb3e"
+metafile = true
+
+[[files]]
+file = "mods/owo-lib.pw.toml"
+hash = "5ba5b2e75d1286477ff22956b486f1fe2a216634e283eea8a123b6529906c7bb"
+metafile = true
+
+[[files]]
+file = "mods/peek.pw.toml"
+hash = "22e9b5d9795e000d5da783c974f0653993b110ae59e1e7cac0c082e206004934"
+metafile = true
+
+[[files]]
+file = "mods/placeholder-api.pw.toml"
+hash = "e674752dd4dd07c33d9b94f6e19c15ef893c356c3c5ed77aeaf35cf6d2325130"
+metafile = true
+
+[[files]]
+file = "mods/raised.pw.toml"
+hash = "4e5f9a4fbef8a03ea0f9dbd8cc60540b8a58491e3f84716213ab1a5792403ddc"
+metafile = true
+
+[[files]]
+file = "mods/respackopts.pw.toml"
+hash = "655bc945df6491a4f22eea0429f10b20447e48488ba0794cb301bd6e7cc465dd"
+metafile = true
+
+[[files]]
+file = "mods/scribble.pw.toml"
+hash = "cb4cce65ff8a0cf0a88fe8cb3d321f94f9d7f6a27b0a20631c9352ec0a2778ba"
+metafile = true
+
+[[files]]
+file = "mods/server-resource-pack-checker.pw.toml"
+hash = "0b522c2afe15365b0535e5a744e9c2652f5289fcfbdf328c438212b55dd89834"
+metafile = true
+
+[[files]]
+file = "mods/shadeandsaturation.pw.toml"
+hash = "f05f7e3a3b09305673ca2fa8868367fdffb929555ef3ea4edbcd92806923328a"
+metafile = true
+
+[[files]]
+file = "mods/shulkerboxtooltip.pw.toml"
+hash = "c9fd548aa345384fe05cc143a191e6e507a07c20a08f31562966f5423a4e39d9"
+metafile = true
+
+[[files]]
+file = "mods/simple-voice-chat.pw.toml"
+hash = "cdde1ed66709cde0656be902a1109532f255fd1526991acebe91116a4ab399df"
+metafile = true
+
+[[files]]
+file = "mods/sodium.pw.toml"
+hash = "279ea1bb4b776be9176fe34416e2132e37abfce4483def54177091cc0f2faade"
+metafile = true
+
+[[files]]
+file = "mods/status.pw.toml"
+hash = "231fcca76d289ac462cfcbc4ec351dba6999a98e70d7c535ddef47b1ee069379"
+metafile = true
+
+[[files]]
+file = "resourcepacks/redstone-tweaks.pw.toml"
+hash = "d36d0104f40c65ec6e8f7b37c33662ebe57f06e1c3864f9458fd4ea534f4af6a"
+metafile = true
