@@ -4,8 +4,8 @@ on:
   release:
     types: [published]   # runs when you publish a GitHub Release
 
-  # Optional: allow manual runs from the Actions tab
-  workflow_dispatch:
+permissions:
+  contents: write
 
 jobs:
   build-mrpack:
