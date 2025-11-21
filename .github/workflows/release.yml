@@ -1,0 +1,48 @@
+name: Build and Publish
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout modpack repo
+        uses: actions/checkout@v4
+
+      - name: Install Packwiz
+        run: |
+          curl -sSL https://github.com/packwiz/packwiz/releases/latest/download/packwiz-linux-amd64 \
+            -o /usr/local/bin/packwiz
+          chmod +x /usr/local/bin/packwiz
+
+      - name: Set version in pack.toml
+        run: |
+          sed -i "s/^version = .*/version = \"${{ github.event.release.tag_name }}\"/" pack.toml
+
+      - name: Build using Packwiz
+        run: |
+          VERSION="${{ github.event.release.tag_name }}" \
+          PACK_NAME="my-modpack" \
+          ./utils/build.sh
+
+      - name: Upload artifact to GitHub
+        uses: actions/upload-artifact@v4
+        with:
+          name: modpack
+          path: dist/*.mrpack
+
+      - name: Upload to Modrinth
+        uses: RubixDev/modrinth-upload@v1
+        with:
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          file_path: dist/*.mrpack
+          name: My Modpack ${{ github.event.release.tag_name }}
+          version: ${{ github.event.release.tag_name }}
+          changelog: ${{ github.event.release.body }}
+          game_versions: 1.21.10
+          loaders: fabric
+          release_type: release
+          featured: true
+          project_id: HDlvGK5r
