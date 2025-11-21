@@ -12,11 +12,15 @@ jobs:
       - name: Checkout modpack repo
         uses: actions/checkout@v4
 
+      - name: Set up go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
       - name: Install Packwiz
         run: |
-          curl -L "https://github.com/packwiz/packwiz/releases/latest/download/packwiz-linux-amd64" -o packwiz
-          chmod +x packwiz
-          sudo mv packwiz /usr/local/bin/packwiz
+          go install github.com/packwiz/packwiz@latest
+          echo "$HOME/go/bin" >> $GITHUB_PATH
           packwiz --version
 
       - name: Set version in pack.toml
