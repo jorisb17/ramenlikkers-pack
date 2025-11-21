@@ -1,17 +1,21 @@
-name: Build and Publish
+name: Build .mrpack and attach to Release
+
 on:
   release:
-    types: [ published ]
+    types: [published]   # runs when you publish a GitHub Release
+
+  # Optional: allow manual runs from the Actions tab
+  workflow_dispatch:
 
 jobs:
-  build-and-publish:
+  build-mrpack:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout modpack repo
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Set up go
+      - name: Set up Go
         uses: actions/setup-go@v5
         with:
           go-version: '1.22'
@@ -19,35 +23,26 @@ jobs:
       - name: Install Packwiz
         run: |
           go install github.com/packwiz/packwiz@latest
-          echo "$HOME/go/bin" >> $GITHUB_PATH
-          packwiz --help
+          echo "$HOME/go/bin" >> "$GITHUB_PATH"
+          packwiz --version
 
-      - name: Set version in pack.toml
+      # Optional: sync pack.toml version with the release tag
+      - name: Set version in pack.toml from tag
         run: |
-          sed -i "s/^version = .*/version = \"${{ github.event.release.tag_name }}\"/" pack.toml
+          TAG="${{ github.event.release.tag_name }}"
+          sed -i "s/^version = .*/version = \"${TAG}\"/" pack.toml
 
       - name: Build .mrpack with Packwiz
         run: |
           mkdir -p dist
+          TAG="${{ github.event.release.tag_name }}"
           packwiz modrinth export \
-            --output "ramenlikkers-pack-${{ github.event.release.tag_name }}.mrpack"
+            --output "dist/ramenlikkers-pack-${TAG}.mrpack"
 
-      - name: Upload artifact to GitHub
-        uses: actions/upload-artifact@v4
+      # Attach the .mrpack file to the GitHub Release
+      - name: Upload .mrpack to GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: modpack
-          path: dist/*.mrpack
-
-      - name: Upload to Modrinth
-        uses: RubixDev/modrinth-upload@v1
-        with:
-          token: ${{ secrets.MODRINTH_TOKEN }}
-          file_path: ramenlikkers-pack-${{ github.event.release.tag_name }}.mrpack
-          name: Ramenlikkers Pack ${{ github.event.release.tag_name }}
-          version: ${{ github.event.release.tag_name }}
-          changelog: ${{ github.event.release.body }}
-          game_versions: 1.21.10
-          loaders: fabric
-          release_type: release
-          featured: true
-          project_id: HDlvGK5r
+          files: dist/*.mrpack
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

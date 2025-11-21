@@ -1,20 +1,12 @@
 # 🍜🧼 Ramenlikkers Modpack  
 *A chaotic Fabric modpack for the greatest friend group ever born.*
 
-<p align="center">
-  <img src="https://via.placeholder.com/1000x250.png?text=RAMENLIKKERS+MODPACK" alt="Ramenlikkers Banner">
-</p>
-
 ## 🏷️ Badges
 
 <p align="center">
-  <!-- Modrinth project (update slug if needed) -->
-  <a href="https://modrinth.com/modpack/ramenlikkers">
-    <img src="https://img.shields.io/badge/Modrinth-Download-brightgreen?style=for-the-badge&logo=modrinth" />
-  </a>
   <!-- Fabric + MC version info -->
   <img src="https://img.shields.io/badge/Fabric-Latest-blue?style=for-the-badge&logo=fabric" />
-  <img src="https://img.shields.io/badge/Minecraft-1.21.1-orange?style=for-the-badge&logo=minecraft" />
+  <img src="https://img.shields.io/badge/Minecraft-1.21.10-orange?style=for-the-badge&logo=minecraft" />
   <!-- Built with Packwiz -->
   <img src="https://img.shields.io/badge/Packwiz-Built-success?style=for-the-badge&logo=go" />
   <!-- GitHub Actions CI badge for this repo -->
@@ -118,9 +110,6 @@ Because:
 - We’re chaotic  
 - It sounded funny  
 - Nobody could stop us  
-
-If you’re reading this and not in our group:  
-**You can join… if you bring snacks.**
 
 ---
 
