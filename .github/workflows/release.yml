@@ -14,9 +14,10 @@ jobs:
 
       - name: Install Packwiz
         run: |
-          curl -sSL https://github.com/packwiz/packwiz/releases/latest/download/packwiz-linux-amd64 \
-            -o /usr/local/bin/packwiz
-          chmod +x /usr/local/bin/packwiz
+          curl -L "https://github.com/packwiz/packwiz/releases/latest/download/packwiz-linux-amd64" -o packwiz
+          chmod +x packwiz
+          sudo mv packwiz /usr/local/bin/packwiz
+          packwiz --version
 
       - name: Set version in pack.toml
         run: |
