@@ -5,6 +5,11 @@ file = "READNE.md"
 hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
 [[files]]
+file = "mods/architectury-api.pw.toml"
+hash = "659f7b849f370718cc5216c3de0fdc4863391f9889d00ebd4ccef8274ee7026d"
+metafile = true
+
+[[files]]
 file = "mods/armor-poser.pw.toml"
 hash = "d2416c9882caa02158d22a25ab42c95d096a1d00e796e34a46a0c4b6c5267c88"
 metafile = true
@@ -37,6 +42,11 @@ metafile = true
 [[files]]
 file = "mods/facebar.pw.toml"
 hash = "e411d3eaf156c09a380c3d99842201e412174fe2c5c2053b617067fb5e1c9263"
+metafile = true
+
+[[files]]
+file = "mods/jamlib.pw.toml"
+hash = "bdca3c9a098de3c08f996b214cf10ece27351f5f7871c30ff826a2f404daba33"
 metafile = true
 
 [[files]]
@@ -120,8 +130,18 @@ hash = "279ea1bb4b776be9176fe34416e2132e37abfce4483def54177091cc0f2faade"
 metafile = true
 
 [[files]]
+file = "mods/sort-it-out.pw.toml"
+hash = "cb59f007a4f09b171fc41683791345972ceefe312bbf0aef4632eccdc339df2f"
+metafile = true
+
+[[files]]
 file = "mods/status.pw.toml"
 hash = "231fcca76d289ac462cfcbc4ec351dba6999a98e70d7c535ddef47b1ee069379"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-minimap.pw.toml"
+hash = "993390d4661a77aa83c8416f75addfccaf7cee0a7a7311a21742b2036700b5ac"
 metafile = true
 
 [[files]]
